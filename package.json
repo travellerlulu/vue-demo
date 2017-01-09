@@ -1,0 +1,22 @@
+{
+  "name": "vue-demo",
+  "version": "1.0.0",
+  "description": "just a vue demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travellerlulu/vue-demo.git"
+  },
+  "author": "travellerlulu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/travellerlulu/vue-demo/issues"
+  },
+  "homepage": "https://github.com/travellerlulu/vue-demo#readme",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
