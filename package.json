@@ -32,5 +32,9 @@
     "vue-html-loader": "^1.2.2",
     "vue-loader": "^8.5.2",
     "webpack-dev-server": "^1.14.0"
-  }
+  },
+  "keywords": [
+    "vue",
+    "webpack"
+  ]
 }

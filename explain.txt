@@ -1,1 +1,47 @@
-我要测试一下我的github
+{
+  "name": "vue-demo",【项目名称】
+    不要在name中包含js, node字样；
+    这个名字最终会是URL的一部分，命令行的参数，目录名，所以不能以点号或下划线开头；
+    这个名字可能在require()方法中被调用，所以应该尽可能短
+
+  "version": "1.0.0",【项目版本】
+  "description": "just a vue demo", 【项目描述】
+  "main": "index.js", 【主文件】
+  "scripts": { 【一个由脚本命令组成的对象，他们在包不同的生命周期中被执行。key是生命周期事件，value是要运行的命令。】
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }, 
+  "repository": { 【用于指示代码存放位置】
+    "type": "git",
+    "url": "git+https://github.com/travellerlulu/vue-demo.git"
+  },
+  "author": "travellerlulu", 【作者】
+  "license": "ISC", 【开源协议】
+  "bugs": { 【项目的提交问题的url和（或）邮件地址】
+    "url": "https://github.com/travellerlulu/vue-demo/issues"
+  }, 
+  "homepage": "https://github.com/travellerlulu/vue-demo#readme", 【项目链接】
+  "dependencies": { 【是需要发布到生产环境的，指示当前包所依赖的其他包】
+    //...
+  },
+  "devDependencies": { 【一些loader插件只用于开发环境，不用于生产环境如果只需要下载使用某些模块，而不下载这些模块的测试和文档框架，放在这个下面比较不错】
+    "webpack": "^1.14.0",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-runtime": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.10.2",
+    "eslint-loader": "^1.3.0",
+    "html-loader": "^0.4.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-html-loader": "^1.2.2",
+    "vue-loader": "^8.5.2",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "keywords": [  【项目关键字】
+    "vue",
+    "webpack"
+  ]
+}
