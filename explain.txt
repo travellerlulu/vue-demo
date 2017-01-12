@@ -7,7 +7,8 @@
   "version": "1.0.0",【项目版本】
   "description": "just a vue demo", 【项目描述】
   "main": "index.js", 【主文件】
-  "scripts": { 【一个由脚本命令组成的对象，他们在包不同的生命周期中被执行。key是生命周期事件，value是要运行的命令。】
+  "scripts": { 【npm支持自定义一些命令，一个由脚本命令组成的对象，key是生命周期事件，value是要运行的命令。】
+    "start": "webpack-dev-server --hot --inline", 【--hot 热模块替换，前端代码变动时，将变化部分替换】
     "test": "echo \"Error: no test specified\" && exit 1"
   }, 
   "repository": { 【用于指示代码存放位置】
@@ -45,3 +46,7 @@
     "webpack"
   ]
 }
+
+【关于webpack】
+webpack-dev-server是一个小型的node.js Express服务器,它使用webpack-dev-middleware中间件来为通过webpack打包生成的资源文件提供Web服务。它还有一个通过Socket.IO连接着webpack-dev-server服务器的小型运行时程序。webpack-dev-server发送关于编译状态的消息到客户端，客户端根据消息作出响应。
+webpack-dev-server就是一个小型的静态文件服务器
