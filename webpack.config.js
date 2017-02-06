@@ -29,8 +29,10 @@ module.exports = {
 		]
 	},
 	babel: {
-		presets: ['es2015']
+		presets: ['es2015'],
+		plugins: ['transform-runtime']
 	},
+	//resolve和resolveLoader参数来设置模块解析的处理细节，resolve用来配置应用层的模块（要被打包的模块）解析，resolveLoader用来配置loader模块的解析
 	resolve: {
 		//用于指明程序自动补全识别哪些后缀,注意, extensions 第一个是空字符串! 对应不需要后缀的情况.
 		extention: ['','.js','.vue'],
@@ -38,9 +40,16 @@ module.exports = {
 		alias: {
 			//默认 NPM 包导出的是 运行时 构建。为了使用独立构建，在 webpack 配置中添加下面的别名：
 			'vue$': 'vue/dist/vue.common.js'
-		}
+			// 'router$': 'vue-router/dist/vue-router.common.js'
+			// filter: path.join(__dirname,'./src/filters'),
+			// components: path.join(__dirname, './src/components')
+		},
 	},
 	//开启source-map,webpack有多种source-map,
 	devtool: 'eval-source-map'
+	//添加插件
+	// plugins:[
+	// 	new webpack.BannerPlugin('This file is created by travallerlulu')
+	// ]
 
 }
