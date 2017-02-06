@@ -19,5 +19,5 @@
 	eslint用于代码检测，统一代码风格的工具  
 4.配置webpack
 	在webpack.config.js文件中进行配置  
-5.终于要开始写vue~  
+5.终于要开始写vue~    
 	

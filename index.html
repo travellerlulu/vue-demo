@@ -3,9 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>vue-demo</title>
+	<link rel="stylesheet" href="src/style/main.css">
 </head>
 <body>
-	<div id="app"></div>
+	<div id="app">
+		<div class="navbar">
+			<router-link to="/foo">Go to Foo</router-link>
+			<router-link to="/bar">the game</router-link>
+		</div>
+		
+		<router-view></router-view>
+		<Bar></Bar>
+	</div>
 	<script src="dist/main.js"></script>
 </body>
 </html>
