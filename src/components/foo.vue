@@ -7,8 +7,9 @@
 	export default {
 		data () {
 			return {
-				msg: 'this is home'
+				msg: 'this is foo'
 			}
 		}
+		
 	}
 </script>
