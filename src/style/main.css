@@ -46,4 +46,4 @@ table {
 
 /* main */
 .navbar { height: 50px; background-color: #ff97b9; color: #fff; line-height: 50px;font-size: 0;}
-.navbar a { color: #fff; font-size: 18px; text-decoration: none; width: 50%; display: inline-block; text-align: center; font-weight: bold;}
+.navbar a { color: #fff; font-size: 18px; text-decoration: none; width: 33.33%; display: inline-block; text-align: center; font-weight: bold;}
