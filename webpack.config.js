@@ -1,5 +1,6 @@
 var path = require('path');
 //NodeJS中的Path对象，用于处理目录的对象，提高开发效率
+var webpack = require('webpack');
 
 //模块导出
 module.exports = {
@@ -21,11 +22,18 @@ module.exports = {
 			//转化es6的语法
 			{ test: /\.js$/, loader: 'babel', exclude: /node_modules/},
 			//编译css并自动添加前缀，如-webkit-等，多个loaders用!连接
-			{ test: /\.css$/, loader: 'style!css!autoprefixer'},
+			{ test: /\.css$/, loader: 'style!css'},
 			//图片转化，小于8k自动转化为base64的编码，?用于传参
-			{ test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192'},
+			// { test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192'},
 			//html模板编译
 			{ test: /\.(html|tpl)$/, loader: 'html-loader'},
+			//文件编译
+			{ test: /\.(eot|woff|woff2|ttf)([\?]?.*)$/, loader: 'file'},
+			{ test: /\.(png|jpg|gif|svg)(\?\S*)?$/, loader: 'file-loader', 
+				query: {
+					name: '[name].[ext]?[hash]'
+				}
+			}
 		]
 	},
 	babel: {

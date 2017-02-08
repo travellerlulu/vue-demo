@@ -1,15 +1,15 @@
 <template>
-	<div>
+	<div class="movie_wrapper">
 		<h2 class="list_title">豆瓣电影排行榜</h2>
-		<ul>
-			<li v-for="article in articles">
-				{{article.title}}
-			</li>
-		</ul>
+		<div>
+			<ul class="movie_list">
+				<li v-for="article in articles">
+					{{article.title}}
+				</li>
+			</ul>
+		</div>
 	</div>
-	
 </template>
-
 <script>
 	//es6 模块导出
 	export default {
@@ -34,5 +34,8 @@
 	}
 </script>
 <style scoped>
-	.list_title { color: blue; font-size: 16px; margin-bottom: 20px;}
+	.movie_wrapper { width: 60%; background-color: #fff; margin: 40px auto 0; border: 2px solid #ccc; text-align: center;  border-radius: 10px; box-shadow: 0 2px 10px rgba(5,5,5,.2);}
+	.list_title { color: #20A0FF; font-size: 20px; line-height: 60px; font-weight: bold; border-bottom: 1px solid #ccc; height: 60px;}
+	.movie_list {padding: 20px 0;}
+	.movie_list li { line-height: 32px; font-weight: bold; color: #333;}
 </style>
