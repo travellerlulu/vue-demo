@@ -7,7 +7,6 @@
 			<li><router-link to="/bar">the game</router-link></li>
 		</ul>
 		<router-view></router-view>
-		<Loading v-show="loadingShowed"></Loading>
 	</div>
 </template>
 <script>
@@ -16,9 +15,10 @@
 	import Loading from './components/loading.vue';
 
 	export default {
+		
 		data () {
 			return {
-				loadingShowed: false
+				loadingShowed22: false
 			}
 		},
 		components: { Bar, List, Loading}

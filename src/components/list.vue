@@ -13,6 +13,7 @@
 <script>
 	//es6 模块导出
 	export default {
+		props: ['loadingShowed'],
 		data () {
 			return {
 				articles: []

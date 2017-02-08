@@ -7,6 +7,7 @@ import Bar from './components/about.vue';
 import './style/main.css';
 import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css';
+import Loading from './components/loading.vue'
 
 Vue.use(Element)
 
@@ -40,9 +41,19 @@ const app = new Vue({
 	render: h => h(App)
 }).$mount('#app')
 
+const help = new Vue({
+	data: {
+		loadingShowed: false
+	},
+	components: {
+		Loading
+	}
+}).$mount('#help')
+
 Vue.http.interceptors.push((request, next) => {
-	console.log(App)
+	help.loadingShowed = true;
 	next((response) => {
+		help.loadingShowed = false;
 		return response
 	})
 })
