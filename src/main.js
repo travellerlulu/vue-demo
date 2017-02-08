@@ -3,7 +3,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App.vue';
-import Bar from './components/about.vue';
+import Game from './components/game.vue';
 import './style/main.css';
 import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css';
@@ -26,7 +26,7 @@ import List from './components/list.vue';
 const routes = [
 	{path: '/foo',component: Foo},
 	{path: '/list',component: List},
-	{path: '/bar',component: Bar}
+	{path: '/game',component: Game}
 ]
 //3.创建路由实例
 const router = new VueRouter({
