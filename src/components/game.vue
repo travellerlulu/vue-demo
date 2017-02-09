@@ -7,6 +7,7 @@
 				<li v-for="(list, index) in lists" :class="list == '' ? 'blank' : ''" @click="moveGrid(index)">{{list}}</li>
 			</ul>
 		</div>
+		<button class="reset" @click="render">reset</button>
 	</div>
 </template>
 
@@ -22,19 +23,19 @@
 			}
 		},
 		methods: {
-			render () {
+			render () {  //界面渲染
 				var list = [];
 				for(var i = 0; i < len-1; i++) {
 					list.push(i + 1);
 				}
+				//随机排序
 				list = list.sort(function() {
 					return Math.random() -0.5;
 				})
 				list.push('');
 				this.lists = list; 
 			},
-			moveGrid (index) {
-				console.log(index);
+			moveGrid (index) {  //移动格子
 				var top = this.lists[index - column];
 				var left = this.lists[index - 1];
 				var right = this.lists[index + 1];
@@ -43,6 +44,9 @@
 				if(top === '') {
 					this.lists.splice(index - column, 1, current);
 					this.lists.splice(index, 1, '');
+					//另一种方法
+					// this.$set(this.lists, index-column, current);
+					// this.$set(this.lists, index, '');
 				} else if(left === '') {
 					this.lists.splice(index - 1, 1, current);
 					this.lists.splice(index, 1, '');
@@ -53,14 +57,18 @@
 					this.lists.splice(index + column, 1, current);
 					this.lists.splice(index, 1, '');
 				}
-				console.log(this.lists);
+				if(this.lists[len-1] === '') {
+					var isSuccessed = this.lists.every((v,i) => v === i + 1)
+					if(isSuccessed) {
+						alert("666!!!竟然被你拼出来了，真是一个富有挑战精神的人啊~希望你没有妄想要看到别的什么惊喜，并没有~真的没有~");
+					}
+				}
 			}
 		},
 		created () {
 			this.render();
 		}
 	}
-
 </script>
 
 <style>
@@ -71,5 +79,6 @@
 	.grid_list { width: 200px; overflow: hidden; list-style: none;border-left: 1px solid #fff;border-top: 1px solid #fff; margin: 30px auto;}
 	.grid_list li { width: 60px; height: 60px; float: left; text-align: center; background-color: pink; color: #fff; line-height: 60px; font-weight: bold; border-right: 1px solid #fff; border-bottom: 1px solid #fff; cursor: pointer; font-size: 18px;}
 	.grid_list li.blank { background-color: #f5f5f5; box-shadow: 1px 1px 5px rgba(0,0,0,.3) inset;}
-button { }
+	.reset { margin: 20px 0; height: 36px; line-height: 35px; background-color: #db5f85; color: #fcfcfc; width: 120px; text-align: center; border-radius: 8px; border: none; font-size: 16px;outline: none;}
+	.reset:hover { background-color: #e37698; cursor: pointer;}
 </style>

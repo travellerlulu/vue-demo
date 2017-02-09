@@ -21,3 +21,10 @@
 	在webpack.config.js文件中进行配置  
 5.终于要开始写vue~    
 	
+
+
+【要牢记】：
+（1）无法通过数组索引设置一个项
+	[解决] lists.splice(index,1,newVal) 或者 Vue.set(lists,index,newVal)
+（2）无法直接修改数组的长度
+	[解决] lists.splice(newLength)

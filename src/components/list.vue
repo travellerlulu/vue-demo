@@ -4,7 +4,12 @@
 		<div>
 			<ul class="movie_list">
 				<li v-for="article in articles">
-					{{article.title}}
+					<h3>{{article.title}}</h3>
+					<h4>导演：{{article.directors[0].name}}</h4>
+					<!-- <h4>主演：<span v-for="actor in article.casts"></span>{{actor.name}}</h4>
+					<h5 class="labels">
+						<span v-for="label in article.genres">{{label}}</span>
+					</h5> -->
 				</li>
 			</ul>
 		</div>
@@ -39,4 +44,5 @@
 	.list_title { color: #20A0FF; font-size: 20px; line-height: 60px; font-weight: bold; border-bottom: 1px solid #ccc; height: 60px;}
 	.movie_list {padding: 20px 0;}
 	.movie_list li { line-height: 32px; font-weight: bold; color: #333;}
+	.movie_list li h4 { color: #afafaf; font-size: 16px;}
 </style>
