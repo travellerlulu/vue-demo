@@ -8,7 +8,6 @@
     "start": "webpack-dev-server --hot --inline"
   },
   "dependencies": {
-    "element-ui": "^1.0.0-rc.9",
     "vue": "^2.1.4",
     "vue-resource": "^1.2.0"
   },

@@ -2,7 +2,7 @@
 	<div>
 		<h1 class="title">Hello App!</h1>
 		<ul class="navbar_list clearfix">
-			<li><router-link to="/foo">Go to Foo</router-link></li>
+			<li><router-link to="/news">Go to Foo</router-link></li>
 			<li><router-link to="/list">Movie Ranking</router-link></li>
 			<li><router-link to="/game">Little Game</router-link></li>
 		</ul>
@@ -12,6 +12,7 @@
 <script>
 	import Game from './components/game.vue';
 	import List from './components/list.vue';
+	import NewsList from './components/newsList.vue';
 	import Loading from './components/loading.vue';
 
 	export default {
@@ -20,7 +21,7 @@
 				loadingShowed22: false
 			}
 		},
-		components: { Game, List, Loading}
+		components: { Game, List, NewsList, Loading}
 	}
 </script>
 <style>

@@ -5,11 +5,10 @@ import VueResource from 'vue-resource';
 import App from './App.vue';
 import Game from './components/game.vue';
 import './style/main.css';
-import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css';
-import Loading from './components/loading.vue'
-
-Vue.use(Element)
+import Loading from './components/loading.vue';
+import axios from 'axios';
+// Vue.prototype.$http = axios
 
 //开启错误提示
 Vue.config.debug = true;
@@ -19,12 +18,12 @@ Vue.use(VueResource);
 //0.将router注册到vue中(模块化机制)
 Vue.use(VueRouter); 
 //1.定义路由组件
-const Foo = { template: '<p>This is foo!</p>'}
 import List from './components/list.vue';
+import NewsList from './components/newsList.vue';
 
 //2.定义路由
 const routes = [
-	{path: '/foo',component: Foo},
+	{path: '/news',component: NewsList},
 	{path: '/list',component: List},
 	{path: '/game',component: Game}
 ]
